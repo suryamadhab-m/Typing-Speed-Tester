@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Tester</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Typing Speed Tester</h1>
+            <p>Test your typing speed and accuracy</p>
+        </header>
+
+        <div class="stats-container">
+            <div class="stat">
+                <span class="stat-label">Time</span>
+                <span class="stat-value" id="time">60s</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">WPM</span>
+                <span class="stat-value" id="wpm">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Accuracy</span>
+                <span class="stat-value" id="accuracy">100%</span>
+            </div>
+        </div>
+
+        <div class="text-container">
+            <div class="text-display" id="textDisplay"></div>
+        </div>
+
+        <div class="input-container">
+            <textarea 
+                id="textInput" 
+                placeholder="Click here and start typing..." 
+                disabled
+            ></textarea>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" class="btn btn-primary">Start Test</button>
+            <button id="resetBtn" class="btn btn-secondary">Reset</button>
+        </div>
+
+        <div class="results" id="results" style="display: none;">
+            <h2>Test Complete!</h2>
+            <div class="result-stats">
+                <div class="result-item">
+                    <span class="result-label">Words Per Minute:</span>
+                    <span class="result-value" id="finalWpm">0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Accuracy:</span>
+                    <span class="result-value" id="finalAccuracy">100%</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Characters Typed:</span>
+                    <span class="result-value" id="charactersTyped">0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Errors:</span>
+                    <span class="result-value" id="totalErrors">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
